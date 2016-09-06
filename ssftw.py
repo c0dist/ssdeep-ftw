@@ -90,7 +90,7 @@ class SSFTW:
                 return None
             
             # "ssdeep_exe -s -c filepath"
-            cmd = "%s -s -c %s" % (self.ssdeep_exe, filepath)
+            cmd = [self.ssdeep_exe, "-s", "-c", filepath]
         
             # Executing finally.
             process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
@@ -155,7 +155,7 @@ class SSFTW:
         """
         if hashfile:
             # Logic to compute ratio for two hash files.
-            cmd = "%s -s -x %s %s" % (self.ssdeep_exe, file1, file2)
+            cmd = [self.ssdeep_exe, "-s", "-x", file1, file2]
             # Executing finally.
             process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
             output, err = process.communicate()
