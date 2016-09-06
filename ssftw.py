@@ -84,6 +84,7 @@ class SSFTW:
 
         :returns ssdeep hash (str) if success, else None.
         """
+        filepath = os.path.abspath(filepath)
         if os.path.exists(filepath):
             if not os.path.isfile(filepath):
                 print "[-] %s is not a file." % filepath
@@ -153,6 +154,9 @@ class SSFTW:
 
         :returns int if command succeeds, else None.
         """
+        file1 = os.path.abspath(file1)
+        file2 = os.path.abspath(file2)
+        
         if hashfile:
             # Logic to compute ratio for two hash files.
             cmd = [self.ssdeep_exe, "-s", "-x", file1, file2]
