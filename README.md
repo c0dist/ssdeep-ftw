@@ -1,5 +1,7 @@
 # ssdeep-ftw
-SSDEEP Python Wrapper - For The Windows
+SSDEEP Python Wrapper - For The Windows 
+
+[Blog post here](https://c0d.ist/ssdeep-python-windows-wrapper/)
 
 ## Introduction
 [SSDEEP](http://ssdeep.sourceforge.net/), I believe, is an essential tool to many researchers, malware analysts, reverse engineers, etc. It is available as binary for various platforms. However, same is not the case with Python bindings.
